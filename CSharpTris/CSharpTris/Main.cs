@@ -7,12 +7,12 @@ namespace CSharpTris
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class Game1 : Game
+    public class Main : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         
-        public Game1()
+        public Main()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -26,7 +26,11 @@ namespace CSharpTris
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            Window.Title = "C#tris by JaanJah";
+
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.ApplyChanges();
 
             base.Initialize();
         }
